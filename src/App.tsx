@@ -1,4 +1,3 @@
-import { Button } from "antd";
 import { useGlobalStore } from "./store";
 
 function App() {
@@ -7,20 +6,15 @@ function App() {
   const decrease = useGlobalStore((state) => state.decrease);
 
   return (
-    <>
-      <h1 text-white flex justify-center text-sm>
-        hello. I am luxudong.
-      </h1>
-      <div className="w-full h-full flex flex-col justify-center items-center">
-        <div text-white>{count}</div>
-        <Button type="text" text-white onClick={() => increase()}>
-          <span hover:text-white>increase</span>
-        </Button>
-        <Button type="text" text-white onClick={() => decrease()}>
-          <span hover:text-white>decrease</span>
-        </Button>
-      </div>
-    </>
+    <div className="w-full h-full flex flex-col justify-center items-center">
+      <div className="text-white font-semibold text-4xl">{count}</div>
+      <button onClick={() => increase()}>
+        <span className="text-white border">increase</span>
+      </button>
+      <button onClick={() => decrease()}>
+        <span className="text-white border">decrease</span>
+      </button>
+    </div>
   );
 }
 
