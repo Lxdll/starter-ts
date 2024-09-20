@@ -6,13 +6,13 @@ function App() {
   const decrease = useGlobalStore((state) => state.decrease);
 
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center">
-      <div className="text-white font-semibold text-4xl">{count}</div>
+    <div className="flex h-full w-full flex-col items-center justify-center">
+      <div className="text-4xl font-semibold text-white">{count}</div>
       <button onClick={() => increase()}>
-        <span className="text-white border">increase</span>
+        <span className="border text-white">increase</span>
       </button>
       <button onClick={() => decrease()}>
-        <span className="text-white border">decrease</span>
+        <span className="border text-white">decrease</span>
       </button>
     </div>
   );
