@@ -1,4 +1,4 @@
-import { useGlobalStore } from "./store";
+import { useGlobalStore } from './store';
 
 function App() {
   const count = useGlobalStore((state) => state.count);
